@@ -1,0 +1,145 @@
+.wrapper {
+  height: 100vh;
+  @include flex-center;
+}
+
+.modal {
+  width: 296px;
+  height: 272px;
+  padding: 16px;
+  border-radius: 3px;
+  background: #FFFFFF;
+  color: #000000;
+
+  &__title {
+    font-family: FuturaPT-Demi;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__subtitle {
+    margin-top: 12px;
+    font-family: ProximaNova-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__inner {
+    margin-top: 16px;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__btn {
+    width: 126px;
+    height: 32px;
+    @include flex-center;
+    border: none;
+    cursor: pointer;
+    font-family: ProximaNova-Semibold;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__reg-btn {
+    position: relative;
+    border-radius: 3px;
+    background: #3498DB;
+    color: #FFFFFF;
+
+    &:active {
+      border: 1px solid #FFFFFF;
+    }
+
+  }
+
+  &__enter-btn {
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    background: #FFFFFF;
+
+    &:active {
+      border: 1px solid #000000;
+    }
+  }
+
+  &__buttons-item--reg {
+    position: relative;
+
+    &:hover {
+      .modal__popup {
+          opacity: 1;
+          visibility: visible;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    top: 41px;
+    left: -102px;
+    width: 177px;
+    height: 108px;
+    padding: 16px;
+    @include flex-column-start;
+    gap: 12px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &__popup-triangle {
+    z-index: 10;
+    position: absolute;
+    top: -7px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+  }
+
+  &__popup-text {
+    font-family: ProximaNova-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  &__popup-link {
+    font-family: ProximaNova-Semibold;
+    font-weight: 600;
+    font-size: 14px;
+    color: #3498DB;
+  }
+
+  &__text-item {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: ProximaNova-Semibold;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__social {
+    @include flex-start;
+    gap: 16px;
+  }
+
+  &__social-item {
+    width: 24px;
+    height: 24px;
+  }
+}
+

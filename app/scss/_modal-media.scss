@@ -1,0 +1,19 @@
+@media (min-width: 769px) and (max-width: 1400px) {
+  .modal {
+    width: 696px;
+    height: 158px;
+
+    &__title {
+      line-height: 28px;
+    }
+
+    &__inner {
+      flex-flow: row;
+    }
+
+    &__reg-btn {
+      width: 197px;
+      height: 32px;
+    }
+  }
+}
